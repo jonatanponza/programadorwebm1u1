@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA U2 | PORTAL DE MUSICA</title>
+</head>
+<body>
+    <h1>PORTAL DE MUSICA</h1>
+    <img src="img/rockola400x400.jpg" alt="intro rockola">
+    <h3>
+        Sitio web donde podras escuchar tus temas favoritos y nuestras recomendaciones con rotacion diaria
+    </h3>
+<p>
+    Haz click en cada uno para reproducir
+</p>
+    <h2>Temas destacados</h2>
+    <ol>
+        <li>Bee Gees - Jive Talkin</li>
+        <audio src="audio/Bee Gees - Jive Talkin' (2021 Remaster) (128kbit_AAC).m4a" controls></audio>
+        <li>Elton John - Healing Hands</li>
+        <audio src="audio/Elton John - Healing Hands (128kbit_AAC).m4a" controls></audio>
+        <li>Queen - Radio Ga Ga</li>
+        <audio src="audio/Queen - Radio Ga Ga (Official Video) (128kbit_AAC).m4a" controls></audio>
+    </ol>
+    <h2>Video recomendado</h2>
+<video src="video/U2 - Vertigo (Official Music Video) (1080p_25fps_H264-128kbit_AAC).mp4" controls></video>
+<!-- averiguar como achicar cuadro video -->
+<h2>Encuesta: ¿Que generos te gustan más?</h2>
+<form action="">
+    <ul>
+        <li>
+            <input type="checkbox" name="generos" value="rock" id="rock">
+            <label for="rock">Rock</label>
+        </li>
+        <li>
+            <input type="checkbox" name="generos" value="alternativo" id="alternativo">
+            <label for="alternativo">Alternativo</label>
+        </li>
+        <li>
+            <input type="checkbox" name="generos" value="jazz" id="jazz">
+            <label for="jazz">Jazz</label>
+        </li>
+        <li>
+            <input type="checkbox" name="generos" value="pop" id="pop">
+            <label for="pop">Pop</label>
+        </li>
+    </ul>
+    <h2>¿Cual es tu canción favorita?</h2>
+    <p>
+        <label for="">Nombre del artista</label>
+        <input type="text" name="artista">
+    </p>
+    <p>
+        <label for="">Nombre del tema</label>
+        <input type="text" name="tema">
+    </p>
+    <p>
+        <textarea name="comentarios" id="" cols="30" rows="10" placeholder="Dejanos tu comentarios"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </p>
+</form>
+</body>
+<footer>
+    <p>
+        Paginas que nos acompañan:
+    </p>
+    <a href="https://www.fender.com/es/start" target="_blank"><img src="img/fender_logo.png" alt="Fender logo"></a>
+    <a href="https://www.spotify.com/ar/premium/" target="_blank"><img src="img/spotify_logo.png" alt="Spotify logo"></a>
+    <a href="https://www.sonymusic.com.ar/" target="_blank"><img src="img/sony-music-logo.jpg" alt="Sony logo"></a>
+<!-- idem anterior, como cambiar tamaño img -->
+</footer>
+</html>
