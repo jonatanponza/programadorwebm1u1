@@ -8,16 +8,19 @@
 </head>
 <body>
 
-	<h1>CSS</h1>
+	<h1 id="titulo">CSS</h1>
     <p id="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis laboriosam laudantium, nisi ab aut quod odio perferendis expedita nihil quo error, alias cum inventore vel voluptates natus similique, eum dolorum?</p>
     <button id="menos">10px</button>
     <button id="mas">30px</button>
+    <button id="mayor">Titulo</button>
 
     <script>
         // CSS
         const parrafo = document.getElementById('parrafo');
         const menos = document.getElementById('menos');
         const mas = document.getElementById('mas');
+        const mayor = document.getElementById('mayor')
+        const titulo = document.getElementById('titulo')
 
 
         // podemos acceder a propiedades de css 
@@ -28,6 +31,10 @@
 
         mas.addEventListener('click', function () {
             parrafo.style.fontSize = '30px';
+        });
+
+        mayor.addEventListener('click', function () {
+            titulo.style.fontSize = '80px';
         });
                  	
     </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Contador de caracteres</title>
+</head>
+
+<body>
+    <textarea id="texto" name="" onkeyup="contar(this);" cols="30" rows="10"
+        placeholder="Escriba para comenzar a contar los caracteres"></textarea>
+    <p id="caracteres">0 caracteres escritos</p>
+
+    <script>
+        function contar(obj) {
+            var cantidad = obj.value.length
+
+            if (cantidad >= 100) {
+                document.getElementById("caracteres").innerHTML = 'Haz superado los 100 caracteres; ' + cantidad + ' caracteres escritos';
+            } else {
+                document.getElementById("caracteres").innerHTML = cantidad + ' caracteres escritos';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

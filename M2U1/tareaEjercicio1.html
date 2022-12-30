@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 M2U1</title>
+    <link rel="stylesheet" href="tareaEjercicio1.css">
+</head>
+
+<body id="fondo">
+    <h1>Haz click para cambiar el color de fondo</h1>
+    <div id="contenedor">
+        <div id="amarillo"></div>
+        <div id="cyan"></div>
+        <div id="magenta"></div>
+    </div>
+
+    <script>
+
+        var colorFondo = document.getElementById("fondo")
+        const fondoAmarillo = document.getElementById("amarillo")
+        const fondoCyan = document.getElementById("cyan")
+        const fondoMagenta = document.getElementById("magenta")
+
+        fondoAmarillo.addEventListener("click", function () {
+            colorFondo.style.backgroundColor = "#ffff00"
+            fondoAmarillo.style.borderStyle = "dashed"
+            fondoCyan.style.borderStyle = "solid"
+            fondoMagenta.style.borderStyle = "solid"
+        })
+
+        fondoCyan.addEventListener("click", function () {
+            colorFondo.style.backgroundColor = "#00ffff"
+            fondoAmarillo.style.borderStyle = "solid"
+            fondoCyan.style.borderStyle = "dashed"
+            fondoMagenta.style.borderStyle = "solid"
+        })
+
+        fondoMagenta.addEventListener("click", function () {
+            colorFondo.style.backgroundColor = "#ff00ff"
+            fondoAmarillo.style.borderStyle = "solid"
+            fondoCyan.style.borderStyle = "solid"
+            fondoMagenta.style.borderStyle = "dashed"
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+#amarillo {
+    height: 150px;
+    width: 150px;
+    background-color: #ffff00;
+    border: black solid;
+    border-radius: 75px;
+}
+
+#cyan {
+    height: 150px;
+    width: 150px;
+    background-color: #00ffff;
+    border: black solid;
+    border-radius: 75px;
+}
+
+#magenta {
+    height: 150px;
+    width: 150px;
+    background-color: #ff00ff;
+    border: black solid;
+    border-radius: 75px;
+}
+
+#contenedor {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}

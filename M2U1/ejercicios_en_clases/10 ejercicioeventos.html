@@ -9,6 +9,10 @@
 <body>
  	<h1>Boton</h1>
     <button id="boton">Mostrar Alert</button>
+
+    <p id="demo">
+        Este elemento tiene espacio extra y contiene <span>una etiqueta span</span>
+    </p>
       
     <script>
     	 // boton
@@ -16,6 +20,15 @@
         boton.addEventListener('click' , function(e) {
             alert(e.currentTarget.innerText);
         });
+
+        function gethtml(){
+            alert(document.getElementById('demo').innerHTML)
+        }
+        function getinnertext(){
+            alert(document.getElementById('demo').innerText)
+        }
+        console.log(`gethtml`)
+        console.log(getinnertext())
     </script>
 </body>
 </html>
