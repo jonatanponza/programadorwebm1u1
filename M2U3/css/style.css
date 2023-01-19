@@ -1,0 +1,59 @@
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Rowdies', cursive; */
+footer {
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    font-family: 'Rowdies', cursive;
+    text-transform: uppercase;
+}
+
+.hero {
+    background: url(../img/Turismo_y_Deporte_Aventura.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 600px;
+    color: orangered;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.list-group-item {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    transition: background-color .5s;
+    offset: ora;
+}
+
+.list-group-item:hover {
+    background-color: orangered;
+}
+
+.titulo-carousel {
+    background-color: orangered;
+    color: white;
+}
+
+.modal-title {
+    color: white;
+}
+
+.modal-header {
+    background-color: orangered;
+}
