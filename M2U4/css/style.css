@@ -2,7 +2,7 @@
 /* font-family: 'Permanent Marker', cursive; */
 /* font-family: 'Rowdies', cursive; */
 footer {
-    background-color: cadetblue;
+    background-color: darkgray;
     color: white;
     text-align: center;
     text-transform: capitalize;
@@ -50,7 +50,12 @@ h4 {
 
 .titulo-carousel {
     background-color: cadetblue;
+    color: white;
+}
+
+.carousel-caption h4, .carousel-caption p {
     color: black;
+    background-color: cadetblue;
 }
 
 .modal-title {
@@ -59,4 +64,37 @@ h4 {
 
 .modal-header {
     background-color: cadetblue;
+}
+
+#historia {
+    background-color: cadetblue;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.card-body {
+    background-color: cadetblue;
+}
+
+.card-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#mapa iframe {
+    width: 100%;
+    aspect-ratio: 1.2;
+}
+
+#conocenos {
+    background-color: cadetblue;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll_selection {
+    scroll-margin-top: 65px;
 }

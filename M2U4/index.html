@@ -18,9 +18,9 @@
 
 <body>
     <!-- Abre navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <p class="navbar-brand" href="#">Turismo y Aventura</p>
+            <p class="navbar-brand" href="#">Turismo Aventura</p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,19 +28,26 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Aventuras</a>
+                        <a class="nav-link" href="#noticias">Aventuras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comentarios</a>
+                        <a class="nav-link" href="#carousel">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#staff">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conocenos">Conocenos</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Nuestras Redes
-                        </a>
+                            aria-expanded="false">Nuestras Redes</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Facebook</a></li>
                             <li><a class="dropdown-item" href="#">Instagram</a></li>
@@ -55,17 +62,17 @@
     <!-- Contenido del sitio -->
     <!-- abre hero -->
     <div class="container-fluid">
-        <div id="home" class="row align-items-center-top hero">
+        <div id="home" class="row align-items-center hero scroll_selection">
             <div class="col-lg-4 offset-lg-4">
                 <h1>Turismo Aventura</h1>
                 <h3>Elegi unas vacaciones diferentes.</h3>
             </div>
         </div>
         <!-- cierra hero -->
-        <div id="noticias y comentarios" class="row py-5">
+        <div id="noticias" class="row py-5 scroll_selection">
             <!-- abre novedades -->
             <div class="list-group col-lg-3 offset-lg-1">
-                <h3 style="color: black; background-color: cadetblue; padding-left: 10px;">Nuestras Aventuras:</h3>
+                <h3 style="color: white; background-color: cadetblue; padding-left: 10px;">Nuestras Aventuras:</h3>
                 <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">Cicloturismo Mendoza</button>
                 <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
@@ -79,8 +86,8 @@
             </div>
             <!-- cierra novedades -->
             <!-- abre carousel -->
-            <div id="carousel" class="col-lg-5 offset-lg-1">
-                <h3 class="titulo-carousel">Experiencias de nuestros clientes:</h3>
+            <div id="carousel" class="col-lg-5 offset-lg-1 scroll_selection">
+                <h3 class="titulo-carousel">Comentarios:</h3>
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
@@ -92,24 +99,24 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://via.placeholder.com/350x150" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4>First slide label</h4>
-                                <p>Some representative placeholder content for the first slide.</p>
+                            <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block align-items-top">
+                                <h4>"Muy bueno. Hay Actividades para toda la familia"</h4>
+                                <p>Roberto, Capital Federal</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://via.placeholder.com/350x150" class="d-block w-100" alt="...">
+                            <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h4>Second slide label</h4>
-                                <p>Some representative placeholder content for the second slide.</p>
+                                <h4>"Hermosa experiencia y una vacaciones diferentes"</h4>
+                                <p>Isabel, Salta</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://via.placeholder.com/350x150" class="d-block w-100" alt="...">
+                            <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h4>Third slide label</h4>
-                                <p>Some representative placeholder content for the third slide.</p>
+                                <h4>"Espectacular!! Muy divertido para hacer con amigos"</h4>
+                                <p>Sofia, Neuquen</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +142,7 @@
                         <h4 class="modal-title">Cicloturismo en Mendoza</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="https://via.placeholder.com/150" alt="bici mendoza">
+                        <img src="img/modal_bici.jpg" alt="bici mendoza" class="container-fluid">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
                             iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
                             optio tempora. Rerum vel rem possimus recusandae!</p>
@@ -154,7 +161,7 @@
                         <h4 class="modal-title">Raffting en Santa Cruz</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="https://via.placeholder.com/150" alt="raffting santa cruz">
+                        <img src="img/modal_raffting.jpg" alt="raffting santa cruz" class="container-fluid">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
                             iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
                             optio tempora. Rerum vel rem possimus recusandae!</p>
@@ -173,7 +180,7 @@
                         <h4 class="modal-title">Escalada en Tandil</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="https://via.placeholder.com/150" alt="escalada tandil">
+                        <img src="img/modal_escalada.jpg" alt="escalada tandil">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
                             iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
                             optio tempora. Rerum vel rem possimus recusandae!</p>
@@ -192,7 +199,7 @@
                         <h4 class="modal-title">Trekking en San Juan</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="https://via.placeholder.com/150" alt="trekk san juan">
+                        <img src="img/modal_trekking.jpg" alt="trekk san juan">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
                             iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
                             optio tempora. Rerum vel rem possimus recusandae!</p>
@@ -211,7 +218,7 @@
                         <h4 class="modal-title">Parapente en La Rioja</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="https://via.placeholder.com/150" alt="parapente rioja">
+                        <img src="..." alt="parapente rioja">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
                             iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
                             optio tempora. Rerum vel rem possimus recusandae!</p>
@@ -224,10 +231,104 @@
             </div>
         </div>
         <!-- cierra modal -->
-
+        <!-- abre seccion historia -->
+        <div id="historia" class="scroll_selection">
+            <h2>Sobre nosotros</h2>
+            <div class="col-12">
+                <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium assumenda aliquam ducimus
+                    cupiditate ipsum, perferendis suscipit autem quam cum accusamus excepturi error. In saepe quod
+                    necessitatibus ipsa voluptatibus voluptas temporibus!</h4>
+            </div>
+            <div class="row justify-content-evenly">
+                <div class="col-4">
+                    <img src="img/historia_raffting.jpg" alt="raffting">
+                </div>
+                <div class="col-4">
+                    <img src="img/historia_tirolesa.jpg" alt="tirolesa">
+                </div>
+            </div>
+        </div>
+        <!-- cierra seccion historia -->
+        <!-- abre seccion staff -->
+        <div id="staff" class="py-5 col-lg-6 offset-lg-3 scroll_selection">
+            <h2>Staff</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/card_staff1.jpg" class="card-img-top" alt="staff1">
+                        <div class="card-body">
+                            <h3 class="card-title">Ramiro Gonzalez</h3>
+                            <p class="card-text">Guia en cicloturismo y cabalgatas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/card_staff2.jpg" class="card-img-top" alt="staff2">
+                        <div class="card-body">
+                            <h3 class="card-title">Santiago Scalp</h3>
+                            <p class="card-text">Guia especialista en kayak y raffting. Ademas le apacionan todos los deportes de acuaticos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/card_staff3.jpg" class="card-img-top" alt="staff3">
+                        <div class="card-body">
+                            <h3 class="card-title">Maria Laura Hiss</h3>
+                            <p class="card-text">Escaladora. Es nuestras especialista en actividades de cuerda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cierra seccion staff -->
+        <!-- abre conocenos -->
+        <!-- abre mapa -->
+        <div id="conocenos" class="row py-5 scroll_selection">
+            <div class="col-md-4 offset-md-2">
+                <h3>Donde estamos</h3>
+                <div id="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d878.750173118849!2d-58.49381432139926!3d-34.505163684007385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb116d379918f%3A0xd94a220e94552393!2sAv.%20Maip%C3%BA%203320%2C%20La%20Lucila%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1674236820460!5m2!1ses!2sar">
+                    </iframe>
+                </div>
+            </div>
+            <!-- cierra mapa -->
+            <!-- abre form contacto -->
+            <div class="col-md-4 offset-md-1">
+                <form class="row g-3">
+                    <h3>Contactanos</h3>
+                    <div class="col-md-6">
+                        <label for="Nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido">
+                    </div>
+                    <div class="col-6">
+                        <label for="tel" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="telefono">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- cierra form contacto -->
+        </div>
+        <!-- cierra conocenos -->
     </div>
     <!-- Fin contenido -->
-
     <footer>
         <p>Diseñado por WebDesing ltd. Todos los derechos reservados.</p>
     </footer>
