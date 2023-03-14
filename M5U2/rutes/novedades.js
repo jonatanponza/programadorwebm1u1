@@ -1,8 +1,4 @@
-var express = require('express');
-var router = express.Router();
-var novedadesModel = require('../../models/novedadesModel');
-
-/* GET Novedades page. */
+// controlador trae Novedades de la BD
 router.get('/', async function (req, res, next) {
     var novedades = await novedadesModel.getNovedades();
     res.render('admin/novedades', {
@@ -26,7 +22,7 @@ router.get('/agregar', (req, res, next) => {
     });
 });
 
-// controlador agrega en BD
+// controlador agrega entrada en BD
 router.post('/agregar', async (req, res, next) => {
     try {
         if (req.body.titulo != "" && req.body.precio != "" && req.body.fecha != "" && req.body.cuerpo != "") {
@@ -35,7 +31,7 @@ router.post('/agregar', async (req, res, next) => {
         } else {
             res.render('admin/agregar', {
                 layout: 'admin/layout',
-                error: true, message: 'Completar todos los campos'
+                error: true, message: 'Requiere completar todos los campos'
             });
         }
     } catch (error) {
@@ -57,7 +53,7 @@ router.get('/modificar/:id', async (req, res, next) => {
     });
 });
 
-// controlador modifica en la BD
+// controlador modifica novedad en BD
 router.post('/modificar', async (req, res, next) => {
     try {
         var obj = {
@@ -76,9 +72,7 @@ router.post('/modificar', async (req, res, next) => {
         res.render('admin/modificar', {
             layout: 'admin/layout',
             error: true,
-            message: 'La entrada no se pudo modificar'
+            message: 'No se pudo modificar'
         });
     }
 });
-
-module.exports = router;

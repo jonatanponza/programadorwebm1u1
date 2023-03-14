@@ -1,14 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer')
+var nodemailer = require('nodemailer');
+var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Turismo Aventura' });
+router.get('/', async function (req, res, next) {
+  var novedades = await novedadesModel.getNovedades();
+  // novedades = novedades.splice(0,5);
+  res.render('index', { title: 'Turismo Aventura', novedades });
 });
 
+// Envio de formulario
 router.post('/', async (req, res, next) => {
-  
+
   var nombre = req.body.nombre
   var apellido = req.body.apellido
   var email = req.body.email
@@ -18,7 +22,7 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'pepito@gmail.com',
     subject: 'Contacto Aventura',
-    html: nombre +' '+ apellido + ' se contacto para mas información, su correo es: ' + email + ' y su telefono: ' + tel + '. <br> Su mensaje es: ' + mensaje
+    html: nombre + ' ' + apellido + ' se contacto para mas información, su correo es: ' + email + ' y su telefono: ' + tel + '. <br> Su mensaje es: ' + mensaje
   }
 
   var transport = nodemailer.createTransport({

@@ -12,16 +12,10 @@
         <!-- abre novedades -->
         <div class="list-group col-lg-3 offset-lg-1">
             <h3><i class="bi-compass"> Nuestras Aventuras:</i></h3>
+            {{#each novedades}}
             <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Cicloturismo Mendoza</button>
-            <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#exampleModal2">Raffting en Santa Cruz</button>
-            <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#exampleModal3">Escalada en Tandil</button>
-            <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#exampleModal4">Trekking en San Juan</button>
-            <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#exampleModal5">Parapente en La Rioja</button>
+                data-bs-target="#novedadModal{{id}}">{{titulo}}</button>
+            {{/each}}
         </div>
         <!-- cierra novedades -->
         <!-- abre carousel -->
@@ -74,26 +68,28 @@
         <!-- cierra carousel -->
     </div>
     <!-- abre modal -->
-    <div class="modal" tabindex="-1" id="exampleModal">
+    {{#each novedades}}
+    <div class="modal" tabindex="-1" id="novedadModal{{id}}">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Cicloturismo en Mendoza</h4>
+                    <h4 class="modal-title">{{titulo}}</h4>
                 </div>
                 <div class="modal-body">
                     <img src="/images/modal_bici.jpg" alt="bici mendoza" class="container-fluid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
-                        iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
-                        optio tempora. Rerum vel rem possimus recusandae!</p>
+                    <p>{{cuerpo}}</p>
+                    <p>Fecha de actividad: {{fecha}}</p>
+                    <p>Precio: {{precio}}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Mirando</button>
-                    <button type="button" class="btn btn-primary">Inscribirse</button>
+                    {{!-- <button type="button" class="btn btn-primary">Inscribirse</button> --}}
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal" tabindex="-1" id="exampleModal2">
+    {{/each}}
+    {{!-- <div class="modal" tabindex="-1" id="exampleModal2">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -168,8 +164,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal" tabindex="-1" id="exampleModal6">
+    </div> --}}
+    {{!-- <div class="modal" tabindex="-1" id="contactoModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -183,15 +179,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- cierra modal -->
     <!-- abre seccion historia -->
     <div id="historia" class="scroll_selection">
         <h2 style="padding-left: 10px;"><i class="bi-people-fill"> Sobre Nosotros</i></h2>
         <div class="col-12">
-            <h4 style="padding-left: 10px;">Somos una empresa dedicada a brindarte unas vacaciones diferentes enmarcadas
+            <p class="nosotros" style="padding-left: 10px;">Somos una empresa dedicada a brindarte unas vacaciones
+                diferentes enmarcadas
                 en la naturaleza y el deporte aventura. Con actividades personalizadas para cada tipo de grupo ya sean
-                familar o de amigos. Nuestro rquipo se compone de guias especializados y en constante formación.</h4>
+                familar o de amigos. Nuestro equipo se compone de guias especializados y en constante formación.</p>
         </div>
         <div class="row justify-content-evenly">
             <div class="col-4">
@@ -276,9 +273,13 @@
                     <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal6">Enviar</button>
+                    <button type="submit" class="btn btn-outline-light"
+                        onclick="return confirm('Revise sus datos y confirme con Aceptar para terminar')">Enviar</button>
                 </div>
             </form>
+            <div class="mt-3">
+                <p>{{message}}</p>
+            </div>
         </div>
         <!-- cierra form contacto -->
     </div>
