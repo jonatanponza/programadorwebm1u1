@@ -4,7 +4,7 @@
             <h2>Modificar entrada:</h2>
         </div>
         <div style="margin-top: 50px;">
-            <form action="/admin/novedades/modificar" method="post">
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
                 <div class="row g-3 mb-4">
                     <input type="hidden" value="{{novedad.id}}" name="id">
                     <div class="col">
@@ -22,14 +22,27 @@
                             value="{{novedad.fecha}}">
                     </div>
                 </div>
-                <div class="row container mb-4" style="margin-top: 25px;">
+                <div class="row container mb-5" style="margin-top: 25px;">
                     <div class="col">
                         <textarea name="cuerpo" id="" cols="55" rows="10"
                             placeholder="Agregar descripción">{{novedad.cuerpo}}</textarea>
                     </div>
                 </div>
+                <div class="row container mb-4">
+                    <p>
+                        <label for="">Cambiar imagen:
+                            <input type="file" name="imagen" id="imagen">
+                        </label>
+                    </p>
+                    <p>
+                        <label for=""><input type="checkbox" name="img_borrar" id="img_borrar" value="1">
+                            ¡Quitar imagen actual!
+                        </label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
+                </div>
                 <div class="mb-4">
-                    <button type="submit" class="btn btn-primary">Modificar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
                 </div>
             </form>
             {{#if error}}

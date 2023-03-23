@@ -1,5 +1,5 @@
 {
-  "name": "m3u3",
+  "name": "proyecto",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,10 +7,12 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.3",
+    "cloudinary": "^1.35.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
     "express": "~4.16.1",
+    "express-fileupload": "^1.4.0",
     "express-session": "^1.17.3",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",

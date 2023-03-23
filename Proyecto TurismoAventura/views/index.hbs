@@ -11,10 +11,10 @@
     <div id="noticias" class="row py-5 scroll_selection">
         <!-- abre novedades -->
         <div class="list-group col-lg-3 offset-lg-1">
-            <h3><i class="bi-compass"> Nuestras Aventuras:</i></h3>
+            <h3><i class="bi-compass"> Nuestras Actividades:</i></h3>
             {{#each novedades}}
             <button type="button" class="list-group-item list-group-item-action" data-bs-toggle="modal"
-                data-bs-target="#novedadModal{{id}}">{{titulo}}</button>
+                data-bs-target="#novedadModal{{id}}"><img src="{{imagen}}" width="100"> {{titulo}}</button>
             {{/each}}
         </div>
         <!-- cierra novedades -->
@@ -76,7 +76,7 @@
                     <h4 class="modal-title">{{titulo}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="/images/modal_bici.jpg" alt="bici mendoza" class="container-fluid">
+                    <img src="{{imagen}}" class="container-fluid">
                     <p>{{cuerpo}}</p>
                     <p>Fecha de actividad: {{fecha}}</p>
                     <p>Precio: {{precio}}</p>
@@ -89,97 +89,6 @@
         </div>
     </div>
     {{/each}}
-    {{!-- <div class="modal" tabindex="-1" id="exampleModal2">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Raffting en Santa Cruz</h4>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/modal_raffting.jpg" alt="raffting santa cruz" class="container-fluid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
-                        iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
-                        optio tempora. Rerum vel rem possimus recusandae!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Mirando</button>
-                    <button type="button" class="btn btn-primary">Inscribirse</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" tabindex="-1" id="exampleModal3">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Escalada en Tandil</h4>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/modal_escalada.jpg" alt="escalada tandil" class="container-fluid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
-                        iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
-                        optio tempora. Rerum vel rem possimus recusandae!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Mirando</button>
-                    <button type="button" class="btn btn-primary">Inscribirse</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" tabindex="-1" id="exampleModal4">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Trekking en San Juan</h4>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/modal_trekking.jpg" alt="trekk san juan" class="container-fluid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
-                        iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
-                        optio tempora. Rerum vel rem possimus recusandae!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Mirando</button>
-                    <button type="button" class="btn btn-primary">Inscribirse</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" tabindex="-1" id="exampleModal5">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Parapente en La Rioja</h4>
-                </div>
-                <div class="modal-body">
-                    <img src="..." alt="parapente rioja" class="container-fluid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iure sapiente praesentium
-                        iusto. Consequuntur similique quibusdam fugiat qui magni earum accusantium culpa laboriosam
-                        optio tempora. Rerum vel rem possimus recusandae!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Mirando</button>
-                    <button type="button" class="btn btn-primary">Inscribirse</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    {{!-- <div class="modal" tabindex="-1" id="contactoModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Formulario de contacto</h4>
-                </div>
-                <div class="modal-body">
-                    <p>{{message}}</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <!-- cierra modal -->
     <!-- abre seccion historia -->
     <div id="historia" class="scroll_selection">
